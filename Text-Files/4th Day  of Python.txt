@@ -1,0 +1,84 @@
+Conditional Operators: <, >, >=, <=, ==, !=
+:::Whats the difference between if and switch statement 
+STATEMENTs: Use for decision making.
+IFELSE::::::
+Age = int(input("Enter Your age: "))	#You can take input as float also.
+print("Your age is: ", Age)
+print(Age==18)	#Equality
+print(Age>18)
+print(Age<18)
+print(Age>=18)
+print(Age<=18)
+print(Age!=18)	#Not equal Sign
+if(Age>18):
+    print("You are eligible to drive:")	#The space shows you 
+#that you are inside the "if" loop    
+else:
+    print("You are not eligible to drive: ")
+print("Yay!!!!")	#this is not inside the Else loop.
+
+
+ELIF::::::
+N = int(input("Enter the value: "))
+if(N<0):
+    print("The Number is Negative")
+elif(N==0):
+    print("The Number is Zero")
+elif(N!=0):
+    print("The Number is not equal to Zero")
+elif(N>0):
+    print("The Number is greater than zero")
+elif(N<=0):
+    print("The Number is less or equal to zero")
+else:
+    print("The Number is greater or equal to zero")
+
+
+NESTED LOOP::::
+num = float(input("The Number enter by the user: "))
+if(num<0):
+    print("Number is Negative")
+elif(num>0):			#Nesting is started here
+    if(num<=10):
+        print("The number is between 1 and 10")
+    elif(num>10 and num<=11):
+         print("The number is between 10 and 11")
+    elif(num>10  and num<=20):
+        print("The Number is between 11 and 20")
+    else:
+         print("Number is greater than 20")	#Nest ending here
+else:
+    print("Number is zero")
+
+
+NESTED Statements:
+num = int(input("Enter the Value: "))
+if (num<0):
+    print("The value is less than zero")
+elif(num>0):
+    print("The Number is Greater than zero")
+    if(num<=10):
+        print("The Number is less or equal to 10")
+    elif(num>10 or num<=11):
+        print("The Number is in between 10 and 11")
+    elif(num>10 and num<=20):
+        print("The number is in between 10 and 21")
+    else:
+        print("the number is greater than 20")
+else:
+    print("The Number is equal to zero")
+      
+
+
+Home Task: Create a Python code that capable of greeting you with 
+Good Morning, Good Evening and Good After Noon.
+Your Program should use time Module to get the current Hour.
+
+
+
+
+
+
+Make a code for printing the result of the Student by taking the input float 
+value from the user.
+and the result should contain the grades from A to F.

@@ -1,0 +1,113 @@
+Polymorphism:
+The word "polymorphism" means "many forms", 
+and in programming it refers to 
+methods/functions/operators with the same 
+name that can be executed on many objects
+or classes.
+The literal meaning of polymorphism is 
+the condition of occurrence in different forms.
+
+Example 1: Polymorphism in addition operator
+We know that the + operator is used extensively 
+in Python programs. But, it does not have a 
+single usage.
+
+For integer data types, + operator is used to 
+perform arithmetic addition operation.
+
+Similarly, for string data types, + operator is 
+used to perform concatenation.
+______________________________________________________________________
+Function Polymorphism
+An example of a Python function that can 
+be used on different objects is the len() 
+function.
+______________________________________________________________________
+Class Polymorphism
+Polymorphism is often used in Class methods, 
+where we can have multiple classes with the 
+same method name.
+
+For example, say we have three classes: 
+Car and Boat, they both have a 
+method called move():
+______________________________________________________________________
+Example:
+Different classes with the same method:
+
+class Car:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Drive!")
+
+class Boat:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Sail!")
+
+car1 = Car("Ford", "Mustang")       #Create a Car class
+boat1 = Boat("Ibiza", "Touring 20") #Create a Boat class
+
+for x in (car1, boat1):
+  x.move()
+_____________________________________________________________________
+Inheritance Class Polymorphism
+What about classes with child 
+classes with the same name? 
+Can we use polymorphism there?
+
+Yes. If we use the example above and make a 
+parent class called Vehicle, and make Car and, 
+Boat child classes of Vehicle, the child 
+classes inherits the Vehicle methods, 
+but can override them:
+
+Example
+Create a class called Vehicle and make Car, Boat, 
+child classes of Vehicle:
+
+class Vehicle:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Move!")
+
+class Car(Vehicle):
+  pass		#What if we change it??
+
+class Boat(Vehicle):
+  def move(self):
+    print("Sail!")
+
+car1 = Car("Ford", "Mustang") #Create a Car object
+boat1 = Boat("Ibiza", "Touring 20") #Create a Boat object
+
+for x in (car1, boat1):
+  print(x.brand)
+  print(x.model)
+  x.move()
+_______________________________________________________________________
+1. Create Classes for specific animal types
+   (Dog, Cow, Cat)
+2. Define a common interface for all animals
+   (make_sound, eat)
+3. Use polymorphism to call the same method on 
+   different animals objects, which should behave 
+   differently based on their class implementation.
+_______________________________________________________________________
+
+
+
+
+
+
+
+

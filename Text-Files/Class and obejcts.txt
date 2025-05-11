@@ -1,0 +1,215 @@
+CLASSES & OBJECTS:
+A class is blueprint or a tempelate for creating 
+objects, 
+providing initial values for state 
+(member variables or attributes), 
+&  implementation of behaviour 
+(member functions or methods).
+The user defined objects are created using 
+the class keyword.
+
+CLASS CREATION:
+class DataList:
+    name = "Muhammad"
+    age = 25
+    height = 5.8
+
+# OBJECT CREATION: Object is the instance of the
+ class used to access
+# the properties of the class. 
+obj1 = DataList()
+print(obj1.name)
+print(obj1.age)
+______________________________________________________________________________________________
+EXAMPLE:
+class DataList:
+    name = "Muhammad"
+    occupation = "Trainer"
+    netWorth = 100
+a = DataList()
+print(a.name)
+______________________________________________________________________________________________
+EXAMPLE:
+class DataList:
+    name = "Muhammad"
+    occupation = "Trainer"
+    netWorth = 100
+
+a = DataList()
+a.name = "Kaleem"
+a.occupation = "AI Trainer"
+print(a.name, a.occupation)
+
+Task: Class Define:
+Calculation:
+int value, float value, string value, Boolean type.
+print by using object.
+and also print the data type of the values.
+
+
+
+
+If comment out the kaleem and AI then the above will print.
+______________________________________________________________________________________________
+class DataList:
+    name = "Muhammad"
+    occupation = "Trainer"
+    netWorth = 100
+    def info(self):
+        print(f"{self.name} is a {self.occupation}")
+
+a = DataList()
+a.name = "Kaleem"
+a.occupation = "AI Trainer"
+a.info()
+
+##Everything is done by just calling the class.
+now let add again the Kaleem and AI in the code. 
+then????
+______________________________________________________________________________________________
+SELF Parameter:
+The self parameter is a reference to the current instance of the  
+class and is used to access variables that belongs to the class.
+It must be provided as the extra parameter inside the  method 
+defintion. In simple words, self is an object on which the method 
+is calling.
+
+
+
+
+
+
+
+
+______________________________________________________________________________________________
+EXAMPLE:
+# Define a class called Car
+class Car:
+    # Constructor method to initialize the car's attributes
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0  # Default attribute
+
+    # Method to describe the car
+    def describe_car(self):
+        car_info = f"{self.year} {self.make} {self.model}"
+        return car_info
+
+    # Method to read the odometer
+    def read_odometer(self):
+        return f"This car has {self.odometer_reading} miles on it."
+
+    # Method to update the odometer reading
+    def update_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+
+    # Method to increment the odometer reading
+    def increment_odometer(self, miles):
+        self.odometer_reading += miles
+
+# Create instances (objects) of the Car class
+car1 = Car("Toyota", "Corolla", 2019)
+car2 = Car("Tesla", "Model S", 2020)
+
+# Accessing attributes and methods of objects
+print(car1.describe_car())
+print(car2.describe_car())
+
+print(car1.read_odometer())
+print(car2.read_odometer())
+
+car1.update_odometer(10000)
+print(car1.read_odometer())
+
+car2.increment_odometer(500)
+print(car2.read_odometer())
+_______________________________________________________________________________________________________________
+TASK:Task: Create a Class for a Basic Calculator
+
+Instructions:
+
+Create a class called Calculator.
+Define methods within the class for addition, 
+subtraction, 
+multiplication, and division operations.
+Test your class by creating instances and 
+performing operations on them.
+
+https://classroom.google.com/c/NjcxODI1MjM2MTI4?cjc=ufu4i4q
+Password: ufu4i4q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SOLUTION:
+class Calculator:
+    def add(self, num1, num2):
+        return num1 + num2
+    
+    def subtract(self, num1, num2):
+        return num1 - num2
+    
+    def multiply(self, num1, num2):
+        return num1 * num2
+    
+    def divide(self, num1, num2):
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Error: Division by zero is undefined"
+
+# Testing the Calculator class
+calculator = Calculator()
+
+# Perform addition operation
+result_addition = calculator.add(5, 3)
+print("Addition:", result_addition)
+
+# Perform subtraction operation
+result_subtraction = calculator.subtract(10, 4)
+print("Subtraction:", result_subtraction)
+
+# Perform multiplication operation
+result_multiplication = calculator.multiply(7, 2)
+print("Multiplication:", result_multiplication)
+
+# Perform division operation
+result_division = calculator.divide(20, 5)
+print("Division:", result_division)
+

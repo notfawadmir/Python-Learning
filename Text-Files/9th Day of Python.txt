@@ -1,0 +1,73 @@
+LIST COMPREHENSION: List comprehensions are used 
+for creating new lists from other iterables like 
+lists, tuples, dictionaries, sets, and even in
+arrays and strings.
+
+SYNTAX: List = [Expression(item) for item in iterable
+ if condition]
+EXPRESSIOn: The item which is being iterated.
+Iterable: Can be list, tuples etc.
+Condtion: Checks if the item should be added to new
+list or not.
+
+EXAMPLE: Accept items with the small "o" in the new
+list
+
+lst = [i*i for i in range(4)]
+print(lst)
+
+EXAMPLE: Generate even only.
+lst = [i*i for i in range(20) if i%2==0]
+print(lst) 
+
+EXAMPLE:
+names = ["oleh", "Mohammad", "Allah", "Ahmad"]
+namesWith_o = [item for item in names if "o" in item]
+print(namesWith_o)
+
+EXAMPLE:
+names = ["oleh", "Mohammad", "Allah", "Ahmad"]
+namesWith_o = [item for item in names if (len(item)>4)]
+print(namesWith_o) 
+_______________________________________________________________________________________________________________
+TUPLES: Tuples are ordered collection of data items
+they store multiple items in a single variable. 
+tuple items are separated by commas & enclosed within
+round brackets (). Tuples are unchangeable meaning
+we can not alter them after creation.
+Consist of different data type. Fine!!!
+
+EXAMPLE:
+tuple1 = (1,2,3,4,5,6,7,8,9)
+tuple2 = ("Red", "Green", "Blue")
+print(tuple1, tuple2)
+
+EXAMPLE: 
+tup = (1,2,5)
+print(tup)
+print(type(tup))
+
+EXAMPLE:
+tup = (1)	#Shows int in Type why????
+print(tup)	#use comma also in last.
+print(type(tup))
+
+EXAMPLE:
+details = ("Muhammad", 18, "First", 9.8, True)
+print(details)
+
+INDEXING: Same as List.
+CHECKING for ITEM: Used "in" Keyword as in LIST.
+RANGE of INDEX: Same as list:
+syntax: Tuple[start : end : jumpindex]
+
+EXAMPLE: Immutable
+tup = (1,2,3,"a")
+tup[0] = 90
+print(tup)
+
+TASK:Task: Write a Python function that takes 
+two tuples of equal length as input and returns 
+a new tuple containing the element-wise sum of 
+the corresponding elements from the input tuples.
+_______________________________________________________________________________________________________________

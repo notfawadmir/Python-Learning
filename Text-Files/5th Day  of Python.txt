@@ -1,0 +1,116 @@
+MATCH CASE: A match statement will compare a 
+given variable's value to different shapes, 
+also referred to as the pattern. The main idea
+is to keep on compairing the varaible with
+all present patterns until it fits into one.
+
+Match statement was introduced in Python 3.10. 
+It provides a more powerful and 
+flexible alternative to the traditional 
+if, elif, else statements for pattern matching.
+
+MAIN ENTITIES: three main entities are 
+there in Match Case.
+1) The match Keyword.
+2) One or more case clauses.
+3) Expression for each case.
+
+Python 3.10 has this feature so we should have to
+update the python version.
+In python we use match case statement instead of 
+break as in C++ and other languages.
+______________________________________________________________________________________________________
+SYNTAX:
+match varaible name:
+	case 	'pattern 1
+statment 1
+	case	'pattern 2
+statement 2
+	case	'pattern 3
+	.......
+	case	'pattern n
+statement n
+______________________________________________________________________________________________________
+x = int(input("Enter the value of X: "))
+match x:
+    case 0:
+        print("case is zero")
+    case 4:
+        print("case is 4")
+    case _:
+        print(x)
+______________________________________________________________________________________________________
+x = int(input("Enter the value of X: "))
+match x:
+    case 0:
+        print("case is zero")
+    case 4:
+        print("case is 4")
+    case _ if x!=90:
+        print(x, "is not 90")
+    case _ if x!=80:
+        print(x, "is not 80")
+    case _ if x!=70:
+        print(x, "is not 70")
+    case _:	#working like else statement here 
+        print(x)
+______________________________________________________________________________________________________
+x = 4
+match x:
+    case 0:
+        print("x is zero")
+    case 4 if x%2==0:
+        print("x%2==0 and case is 4")
+    case _ if x<10:
+         print("x is less than 10")
+    case _:
+        print(x)
+______________________________________________________________________________________________________
+x = int(input("ENter the Number: "))
+match x:
+    
+    case _ if x%2==0:
+        print(x, "the number is even")
+    case _:
+        print(x, "The number is odd")
+______________________________________________________________________________________________________
+Implement a function called get_day_of_week that 
+takes an integer representing the day of the week 
+(1 for Monday, 2 for Tuesday, ..., 7 for Sunday) 
+and returns the corresponding name of the day. 
+Use the match statement to accomplish this task.
+_____________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+def get_day_of_week(day_number):
+    match day_number:
+        case 1:
+            print("Monday")
+        case 2:
+            print("Tuesday")
+        case 3:
+            print("Wednesday")
+        case 4:
+            print("Thursday")
+        case 5:
+            print("Friday")
+        case 6:
+            print("Saturday")
+        case 7:
+            print("Sunday")
+        case _:
+            print("Invalid day number")
+
+# Test the function
+print(get_day_of_week(1))  # Output: Monday
+print(get_day_of_week(3))  # Output: Wednesday
+print(get_day_of_week(8))  # Output: Invalid day number

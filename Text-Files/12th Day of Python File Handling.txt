@@ -1,0 +1,158 @@
+File I/O: Different Operations perform on different files.
+How the data is write, read, delete in the file.
+_________________________________________________________
+File I/O: Python can be used to perform the operations on
+the file. reading, writing, deleting, appending, data in 
+the file....
+Types of files: Text files (Data in the form of char)
+& Binary files(img, videos etc) in the end Binary form.
+__________________________________________________________
+Why Need file handling::: Because RAM is Volatile and 
+after restarting the data vanished that's why we use files 
+to save the data, store the data--->SSD, HDD
+__________________________________________________________
+Coding::
+f = open("file_name" , "mode")
+data = f.read()
+f.close()
+mode shows the any operation like reading, writing etc.
+__________________________________________________________
+Now create the jupyter Lab file and open it using cmd prompt.
+after that create the text file in the same folder.
+write the code in the .py file and also in .txt file in
+order to read, write and to perform other  operations...
+__________________________________________________________
+Code:Reading the Entire file...
+f = open("demo.txt" , "r")
+data = f.read()
+print(data)
+__________________________________________________________
+Code: After reading t=closing the file also.
+f = open("demo.txt" , "r")
+data = f.read()
+print(data)
+f.close()
+/// Why Closing the file coz hackers can attack...
+__________________________________________________________
+Now we have multiple operations that we can perform on
+files...
+"r" : Reading the file(default)
+"w" : Open for writing, truncating the file first(overwriting)
+"x" : create new file and open for writing.
+"b" : Binary mode
+"t" : Text Mode
+"a" : Appending 
+__________________________________________________________
+Now I want to read out only the specific characters...
+Code:
+f = open("demo.txt" , "r")
+data = f.read(45)  <-------
+print(data)
+It will read the particullar lines according to argument.
+__________________________________________________________
+We can also read the file line by line.
+Code:
+f = open("demo.txt" , "r")
+line1 = f.readline()
+print(line1)
+__________________________________________________________
+Code: Multiple Line reading Task....
+__________________________________________________________
+
+Writing to a File: Two methods: Write method, 
+"w"--> Over Write Mode
+Append Method, "a"--> Add at the end.
+f = open("demo.txt" , "w")
+f.write("Any Question!")
+f.close()
+///Revert Option will over ride the data.
+___________________________________________________________
+Task: Appending the sentence...
+Should be in next line.
+___________________________________________________________
+Now creating the file. 
+Creation of the file is automatic.
+Code:
+f = open("demo1.txt" , "a")
+f.write("This the New file having new text")
+f.close()
+___________________________________________________________
+Can we create the png file????? Do it ..
+___________________________________________________________
+Now I would to over write the starting things 
+then we have to use.
+code:
+f = open("demo1.txt" , "r+")
+f.write("That is  ")
+f.close()
+___________________________________________________________
+We can also use the alternative syntax for 
+reading, writing etc:
+with open("demo1.txt" , "w") as f:
+    data = f.write("I am also Django Trainer")
+///with automatically close the file.
+/// as is used for alias....
+like giving other name to same thingsss.
+__________________________________________________________
+Task: Do the same for reading the file....
+__________________________________________________________
+Now How to delete the file: For this purpose 
+we use the os module. Module is a  file 
+written by the another programmer that 
+generally has a function we can use. 
+import os
+os.remove("Demo.png")
+___________________________________________________________
+Some libraries, module, packages, framework etc.
+how to install the package and all.
+___________________________________________________________
+Practice Task:
+Create a New file "practice.txt" using Python. Add the 
+following Data in it:
+Hi every one
+I am the Ai, Machine Learning and deep Learning Trainer.
+I use the Java Language for my Projects.
+I like programming in Java.
+
+Write a function that replace all the occurences of "Java" 
+with "Python" 
+in the above file.
+Search if the word "Projects" exists in the file or not.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+______________________________________________________________________________________________
+Task Solution:
+with open("Practice.txt" , "w") as f:
+	f.write("Hi Everyone \n I am the Ai, Machine Learning and deep Learning Trainer.\n")
+	f.write("I use the Java Language for my projects. \nI like programming in Java.")
+with open("Practice.txt" , "r") as f:
+    data = f.read()
+    
+new_data = data.replace("Java" , "Python")
+print(new_data)
+
+word = "projects"
+with open("Practice.txt" , "r") as f:
+    data = f.read()
+    print(data)
+    if(data.find(word)!=-1):
+        print("found")
+    else:
+        print("Not Found")

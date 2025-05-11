@@ -1,0 +1,213 @@
+_________________________________________________________________________________________________________________
+FUNCTION ARGUMENTS & RETURN STATEMENT:
++->Default Arguments
++->Keyword Arguments
++->Variable length Arguments
++->Required Arguments
+
+
++->DEFAULT ARGUMENTS: We can provide a default 
+value while creating a function. This way the 
+function assumes a default value even if a value
+is not provided in the function call for that 
+argument. 
+
+EXAMPLE:
+def name(fname, mname = "Muhammad", lname = "Rizwan"):
+	print("Welcome", fname, mname, lname)
+name("Khan")
+
+EXAMPLE: DEFAULT ARGUMENTS:
+def average(a=4,b=6):
+	print("Average of two numbers: ", (a+b)/2)
+average()
+
+EXAMPLE: DEFAULT ARGUMENTS:
+def average(a=4,b=6):
+	print("Average of two numbers: ", (a+b)/2)
+average(3, 4)
+
+EXAMPLE: DEFAULT ARGUMENTS: Take one value as 
+default value from above
+def average(a=4,b=6):
+    	print("Average of two numbers: ", (a+b)/2)
+average(3)
+#incase of "b" just write like
+average(b=6)
+
++->KEYWORD ARGUMENT: if we wish the order does not
+matter then we use the keyword argument. We can 
+provide arguments with key = value, this way the 
+interpreter recognize the arguments by parameter 
+name. Hence, the order in which the arguments are 
+passed does not matter.
+
+EXAMPLE: KEYWORD ARGUMENTS
+def name(fname,mname,lname):
+	print("Hello!", fname, mname, lname)
+
+name(mname = "Ali", lname = "Khan", fname = "Muhammad")
+
+
++->REQUIRED ARGUMENT: In this case we should have to
+provide the value of arguments must. In case we
+don't pass the arguments with a key = value syntax
+passing should be exact positional order with actual
+function definition.
+
+EXAMPLE: REQUIRED ARGUMENTS: Can also take three inputs.
+def average(a,b):	#to check values.
+	print("Average of two numbers: ", (a+b)/2)
+
+average(a = int(input("Enter 1st value: ")), b = int(input("Enter 2nd value: ")))
+_________________________________________________________________________________________________________________
++-> ARBITARY ARGUMENTS:
+While creating a function, pass a * before parameter
+name while defining function. The function accesses
+the arguments by processing thme in the form of 
+tuple.
+
+EXAMPLE:
+def avg(*num):
+    sum = 0
+    for i in num:
+    
+     sum = sum+i
+     print("Average is: ", sum/len(num))
+
+avg(10,10,10)
+
++->KEYWORD ARBITARY ARGUMENTS: TASK
++-> RETURN STATEMENT: TASK
+Make a Document file. 
+Berief description.
+Examples of each.
+_________________________________________________________________________________________________________________
+LISTS: 
+Lists are ordered collection of data items.
+They store multiple items in a single varaible.
+List items are separated by commas and enclosed
+within square brackets[].
+Lists are changeable meaning we can alter them 
+after creation.
+
+Example:
+l = [3, 5, 6]
+print(l)
+print(type(l))
+print(l[0])	#Accessing the index
+
+Example: Each list multiple data types.
+l = [3, 5, 6, "MRK", True, 9.8]
+print(l)
+print(type(l))
+print(l[0])	#Accessing the index
+
+Example:
+lst1 = [1,2,3,4,5,6]
+lst2 = ["red", "blue" , "Yellow"]
+print(lst1)
+print(lst2)
+_______________________________________________________________________________
+LIST INDEX: Each item/element in a list has
+its own unique index. This index can be used
+to access any particular item from the list.
+The first item has index [0], and so on.
+
+EXAMPLE:
+Example:
+l = [3, 5, 6]
+print(l[0])	#Accessing the index
+print(l[1])
+print(l[2])
+______________________________________________________________________________
+ACCESSING LIST ITEMS:
+We can access list items by using the index with 
+the square bracket syntax[]. 
+
+POSITIVE INDEXING:
+As we have seen that list items have index, as such 
+we can access items using these indexes.
+EXAMPLE: Same as above.
+______________________________________________________________________________
+NEGATIVE INDEXING: 
+Similar to positive indexing, negative indexing is
+also used to access items, but from the end of 
+list. The last item has index [-1],[-2] and so on.
+
+EXAMPLE:
+colors = ["Red", "blue", "Green"]
+print(colors[-1])
+print(colors[-2])
+print(colors[-3])
+______________________________________________________________________________
+CHECKING OF ITEM IN THE LIST:
+We can check if a given item is present in the list.
+This is done by using the "in" keyword.
+
+EXAMPLE:
+colors = ["Red", "G", "B","y"]
+if "y" in colors:
+	print("Y is present")
+else:
+	print("Y is not present in the list")
+
+EXAMPLE: Quick Task
+colors = [6, "Red", "G", "B","y"]
+if "6" in colors:
+	print("6 is present")
+else:
+	print("6 is not present in the list")
+______________________________________________________________________________
+RANGE OF INDEX: You can print a range of list 
+items by specifying where you want to start, 
+where do you want to end and if you want to 
+skips elements in between the range.
+
+SYNTAX: listname[start : end : jumpindex]
+
+EXAMPLE: printing the elements within a particular range:
+animals = ["cat", "dog", "bat", "mouse", "horse", "elephant"]
+print(animals[2:5])
+print(animals[-5:-2])
+
+EXAMPLE: printing every 3rd consecutive value
+within a given range.
+animals = ["cat", "dog", "bat", "mouse", "horse", "elephant"]
+print(animals[1:6:3])
+###In this the first element shows you the first 
+index element The second part shows you total 
+length of the list. the third element shows you 
+the last number you want. Here the jump index is 3.
+_______________________________________________________________________________________________________________________________________
+LIST COMPREHENSION: List comprehensions are used 
+for creating new lists from other iterables like 
+lists, tuples, dictionaries, sets, and even in
+arrays and strings.
+
+SYNTAX: List = [Expression(item) for item in iterable if condition]
+EXPRESSIOn: The item which is being iterated.
+Iterable: Can be list, tuples etc.
+Condtion: Checks if the item should be added to new
+list or not.
+
+EXAMPLE: Accept items with the small "o" in the new
+list
+
+lst = [i*i for i in range(4)]
+print(lst)
+
+EXAMPLE: Generate even only.
+lst = [i*i for i in range(20) if i%2==0]
+print(lst) 
+
+EXAMPLE:
+names = ["oleh", "Mohammad", "Allah", "Ahmad"]
+namesWith_o = [item for item in names if "o" in item]
+print(namesWith_o)
+
+EXAMPLE:
+names = ["oleh", "Mohammad", "Allah", "Ahmad"]
+namesWith_o = [item for item in names if (len(item)>4)]
+print(namesWith_o) 
+_______________________________________________________________________________________________________________

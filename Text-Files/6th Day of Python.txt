@@ -1,0 +1,178 @@
+LOOPS in Python: Sometimes a programmer wants to 
+execute  a group of statements a certain number 
+of times. This can be done using loops.
+FOR Loop, While LOOP, Nested LOOPS.
+______________________________________________________________________________________________________
+FOR LOOP: for loops can be iterate over a sequence
+of iterable objects in python. Iterating over a 
+sequence is nothing but iterating over strings,
+lists, tuples, sets and dictionaries.
+
+It's a difficult task to write it out one by one.
+for this purpose we use the loops in programming.
+print(1)
+print(2)
+.......
+print(n)	
+
+EXAMPLE:	#String Iteration:
+name = "Muhammad"
+for i in name:
+    # print(i)
+    print(i, end= ", ")
+    if(i=="u"):
+        print("This is Amazingo!")
+________________________________________________________________________________________________________
+EXAMPLE:	#LIST Iteration:
+colors = ["Red", "Green", "Blue", "Yellow", "Magenta", "voilet", "indigo"]
+for x in colors:
+	print(x)
+#For More readable:
+colors = ["Red", "Green", "Blue", "Yellow", "Magenta", "voilet", "indigo"]
+for color in colors:
+    print(color)
+    for i in color:
+        print(i)
+_______________________________________________________________________________________________________
+RANGE(): What if we dont want to iterate  over a 
+sequence? what if we want to use for loop for a 
+specific number of times?
+
+Example: The value will go from zero to 4 only. 
+and if we want to print upto thousand simply we have
+put the range and find it.
+Range contains three things: Start, Stop & step
+all the three will support index values.
+
+Examples:
+for k in range(5):
+	print(k)
+
+for k in range(5):#This will print upto 5 from 1
+	print(k+1)
+
+for k in range(1,5):
+	print(k)
+
+for k in range(1,2000):
+	print(k+1)
+
+for k in range(-10,10):
+	print(k)
+
+for k in range(0,-10, -1):
+	print(k)
+
+for k in range(1,15,2):  floating steps not working
+    print(k+1)	#Print(Even Numbers upto 15)
+
+for k in range(1,15,2):
+    print(k)	#Print (odd Numbers upto 15)
+_______________________________________________________________________________________________________
+WHILE LOOPS: As the name suggests, while loops 
+execute statments while the condition is True. As
+soon as the condition become False, the interpreter
+comes out of the whie loop.
+
+Example: 
+x = 0
+while(x<5):	#Check for all conditional signs
+	print(x)
+	x=x+1
+print("Done with the Loop")
+######
+count = 15
+while (count>0):
+	print(count)
+	count = count-1
+______________________________________________________________________________________________________
+Now taking input from user in while loop.
+x = int(input("Enter the Value: "))
+while(x<=38):
+    x = int(input("Enter the Value: "))
+    print(x)
+print("Limit exceeds")
+Actually DO while loop is not available in python
+coz instead of do while loop we do the above 
+programming to fulfill our criteria's.
+
+while True:
+	num = int(input("Enter the Number: "))
+	print(num)
+	if not num>0:
+	break
+______________________________________________________________________________________________________
+ELSE With WHILE LOOP:
+As soon as the while loop condition is true it will
+print the values in while loop. When the condition
+of while loop false then it will print out the else
+statement. 
+
+Example:
+x=5
+while(x>0):
+	print(x)
+	x=x-1
+else:
+	print("I  am Inside Else Block")
+######
+x=-5
+while(x>0):
+	print(x)
+	x=x-1
+else:
+	print("I  am Inside Else Block")
+______________________________________________________________________________________________________
+TASK: range = 1 to 100.
+sum of even numbers. 
+______________________________________________________________________________________________________
+Break & Continue Statement:
+The break statement enables a program to skip over 
+a part of code. A break statement terminates the 
+very loop it lies within.
+
+
+Break: Break statement left the loop and get out
+of the loop.
+EXAMPLE:
+for i in range(12):
+    print("5 X ", i+1, "=", 5 * (i+1))
+    if(i==9):	#Upto to 10 only.
+        break
+print("Left the loop and get out of the loop")
+_______________________________________________________________________________________________________
+Continue: Left the iteration and get out of loop.
+EXAMPLE: 
+for i in range(12):
+    if(i==9):	#Upto to 10 only.
+        print("Skip the Iteration")
+        continue
+    print("5 X ", i+1, "=", 5 * (i+1))
+_______________________________________________________________________________________________________
+EXAMPLE: 
+for i in range(12):
+    print("5 X ", i+1, "=", 5 * (i+1))
+it will print the table of 5 upto 12.
+_______________________________________________________________________________________________________
+EXAMPLE:
+for i in range(1,101,1):
+    print(i, end= " ")
+    if(i==50):
+        break
+    print("Mission Passed")
+print("Thank You")
+_______________________________________________________________________________________________________
+EXAMPLE: 
+for i in [2,3,9,4,5,6,8,0]:
+	if(i%2==0):
+		continue
+	print(i)
+_______________________________________________________________________________________________________
+EXAMPLE: 
+i=0
+while True:
+	print(i)
+	i=i+1
+	if(i%100 == 21):
+	  break
+_______________________________________________________________________________________________________

@@ -1,0 +1,118 @@
+TYPE CASTING:
+The conversion of one Data Type into another Data type is known as Type Casting.
+python supports a wide variety of functions or methods like: int(), float(), str(), ord(), tuple(),
+list(), set(), dict(), hex(), oct() etc.
+the data type should be valid.
+
+Array of character: 
+name = "MRK"
+print(name[0])
+print(name[1])
+print(name[2])
+print(name[3])		#show the error of index coz there is no 3 element in the MRK.
+print(Name[0])		# it will show you the charcter by character output.
+print(name[4])
+
+name = "MRK"
+for character in name:
+    print(character)
+output:
+M
+R
+K
+
+we can find the length of the string using the len() function.
+names = "HARIS, Rizwan"
+print(len(names))		#shows the length along with spaces count.
+
+fruit = "Mango"
+len1 = len(fruit)
+print("Mango is a" ,len1, "character word")
+STRING SLICING: String is basically like an array. thats why we can access the elements in the array.
+
+names = "HARIS, Rizwan"
+print(names[0:5])
+
+POSITIVE SLICING: left to right slicing 
+
+name = "Mango"
+MLen = len(name)
+print(MLen)
+print(name[0:4])	#Will print the first four letter
+print(name[:4])    	#auto zero will be assigned by the python itself
+print(name[2:5])   	#it will start from N and end with O.
+print(name[:])		#It will auto print the whole name.
+print(name[1:])		#it will start from a and end with o.
+
+NEGATIVE SLICING: right to left slicing
+name = "Mango"
+MLen = len(name)
+print(name[:-4])    #output will be only M, it subtract whole length from given value
+print(name[:len(name)-4])    #output will be only M, it subtract whole length from given value
+
+LOOP THROUGH STRING:
+strings are array and array are iterable, thus we can loop through string.
+alpha = "ABCD"
+for i in alpha:
+print(i)	#output will be A B C D but in line.
+
+NOW LETS HAVE A QUICK TASK:
+WHat will be the output of the following line of code:
+name = "Muhammad"
+print(name[-6:-1])
+
+STRING METHODS:
+python provides set of built-in methods that we can use to alter and modify 
+the strings.
+UPPERCASE:	Converts the string to uppercase letters.
+a = "Muhammad"
+print(len(a))
+print(a.upper())
+LOWERCASE:	Converts the string to lowercase letters.
+a = "Muhammad"
+print(len(a))
+print(a.lower())
+STRIP:		Remove all the before and after white spaces in the string.
+a = "    Muhammad   "
+print(len(a))
+print(a.strip())
+RSTRIP:		Remove the trailing characters. 
+a = "Muhammad!!!!!!"
+print(len(a))
+print(a.rstrip("!"))
+
+REPLACE:	Replace the word.
+a = "Rizwan"
+print(a.replace("Rizwan", "Muhammad"))
+
+SPLIT:		It splits the given string and returns the separated strings as
+ list item.
+a = "Muhammad Rizwan"
+print(a. split(" "))
+
+CAPITALIZE:	Capitalize the first letter only.
+a = "muhammad"
+capa = a.capitalize()
+print(capa)
+
+ENDSWITH:	Checks the string end with the specified chaarcter or not. IF yes then return true
+else false.
+Find(), isanum(), isaplha(), islower(), isprintable(), isspace(), istitle(), 
+title(), startwith(), swapcase() etc.
+
+
+TASK:Task Title: String Methods Exploration
+Task Description:
+Explore Python string methods to manipulate and analyze strings. 
+Complete the following tasks:
+
+1. Find(): Find the index of "is" in a given sentence.
+2. isalnum(): Check if a string contains only alphanumeric characters.
+3. isalpha(): Check if a string contains only alphabetic characters.
+4. islower(): Check if all characters in a string are lowercase.
+5. isprintable(): Check if a string is printable.
+6. isspace(): Check if a string contains only whitespace characters.
+7. istitle(): Check if a string is in title case.
+8. title(): Convert a string to title case.
+9. startswith(): Check if a string starts with a specific prefix.
+10. swapcase(): Swap the case of characters in a string.

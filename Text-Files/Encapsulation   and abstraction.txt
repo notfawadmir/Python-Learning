@@ -1,0 +1,207 @@
+Abstraction:
+Hiding the implementation details
+of a class and only showing the 
+essential features to the user.
+_____________________________________________________
+Data abstraction in Python is a programming concept 
+that hides complex implementation details while 
+exposing only essential information & functionalities 
+to users.
+_____________________________________________________
+In this we hide the unnecessary 
+features are hide from the user.
+Example of the Car.
+_____________________________________________________
+Example:
+class Car():
+  def __init__(self):
+    self.acc = false
+    self.break = false
+    self.clutch = false
+  def start(self):
+    self.clutch = True
+    self.acc = True
+    print("Car Started....")
+car1 = Car()
+car1.start()
+_____________________________________________________
+Task:
+Make the code in which the Output should be 
+"The Ride is booked in .... rupees"
+___________________________________________________________
+Encapsulation:
+Wrapping data and functions into
+a single unit(object):
+The important word is capsule. 
+In this we have a capsule in which 
+two things are stored: 
+data and function ==> Capsule
+All the codes of the classes is 
+like the encapsulation.
+______________________________________________________
+Encapsulation is an Object-Oriented Programming (OOP) 
+principle that involves bundling the data (attributes) 
+and methods (functions) that operate on the data into 
+a single unit, called a class. This concept helps hide 
+the internal state of an object from the outside world, 
+providing a controlled interface for interacting with 
+the object’s data and methods.
+______________________________________________________
+Encapsulation in Python is implemented using 
+access specifiers to control access to class 
+members:
+
+Public Members: By default, attributes and methods are 
+public and can be accessed from outside the class.
+
+Protected Members: Use a single underscore (_) prefix 
+to indicate that an attribute or method is intended
+for internal use within the class and its subclasses.
+
+Private Members: Use double underscores (_ _) prefix to 
+make an attribute or method private. This leads to name 
+mangling, making it more challenging to access from 
+outside the class.
+______________________________________________________
+Practice:
+Create Account class with 2 attributes:
+Balance & account no. Create Methods 
+for debit, credit and printing the 
+balance.
+______________________________________________________
+class Account():
+   def __init__(self, bal, acc):
+       self.balance = bal
+       self.account_no = acc
+   def debit(self, amount):
+       self.balance -= amount
+       print("RS. " , amount, "Was debited")
+       print("Total balance = ", self.get_balance)
+
+   def credit(self, amount):
+       self.balance += amount
+       print("RS. " , amount, "Was credited")
+       print("Total Balance = ", self.get_balance)
+   def get_balance(self):
+       return self.balance
+acc1 = Account(10000, 1234)
+acc1.debit(1000)
+acc1.credit(5000)
+_______________________________________________________
+TASK:
+Think about a School class that only 
+exposes simple actions like admit_student() 
+and conduct_exam() without showing how these 
+processes are handled internally.
+
+In the School class, we keep student details 
+private and provide public methods to 
+interact with these details.
+________________________________________________________
+Solution of First Task (Ride Booking):
+class indrive():
+    def _init_(self,fare,request):
+        self.request=request
+        self.fare=fare
+    def accept(self):
+        if self.request=="accept":
+            print(f"the car is booked by person with fair {self.fare}")
+
+        else:
+            print("the request is reject")
+n=int(input("enter a fare"))
+ob=indrive(n,"accept")
+ob.accept()
+___________________________________________________________________________
+class InDrive():
+    def _init_(self,fare,accept):
+        self.accept=accept
+        self.fare=fare
+    def drive(self):
+        if self.accept=='yes':
+            print("Drive is Booked")
+        else:
+            print("Drive is rejected")
+
+d1=InDrive(int(input("Enter fare you want to pay : ")),str(input("Do you want to accept the request")))
+d1.drive()
+__________________________________________________________________________________
+Solution of the Second Task:
+class Account():
+    def _init_(self,fee,deposit):
+        self.fee = fee
+        self.deposit=deposit
+          
+
+    def deposit1(self):
+        self.fee -= self.deposit 
+        print("Rs :" , self.deposit , "was debited")
+        
+
+    def remaining(self):
+       
+        print("remainning balance ", self.fee)
+
+    # def get_balance(self):
+    #     return self.fee 
+    
+acc1 = Account(500,450)
+acc1.deposit1()
+acc1.remaining()
+_______________________________________________
+class school():
+    __name=None
+    __class=None
+    __rollno=None
+    __fee=None
+    def _init_(self,name,clas,roll_no,fee):
+        self.__name=name
+        self.__class=clas
+        self.__rollno=roll_no
+        self.__fee=fee
+    def admit_student(self):
+        print(f"The student {self.__name} is admitted in the school")
+    def fee(self,submitted_fee):
+        print(self.__name,"is student in school having fee structure below...")
+        if self.__fee-submitted_fee==0:
+            print("You have submitted fee so you can sit in the exam.")
+        else:
+            print("You can't sit in the exam because you did not pay the fee")
+        
+    def conduct_exam(self):
+        print(f"Exam is only conducted if student {self._name} has submitted his {self._fee}")
+
+s1=school("Ali",12,61,int(input("Enter the fee of student : ")))
+s1.admit_student()
+s1.conduct_exam()
+s1.fee(int(input("enter the submitted fee : ")))
+____________________________________________________________________________________________________________
+Task SOlution:
+class School:
+    def __init__(self):
+        self._students = {}
+        
+    def admit_student(self, name):
+        self._students[name] = 0  # Default grade
+        print(f"Admitted student: {name}")
+    
+    def conduct_exam(self, name, grade):
+        if name in self._students:
+            self._students[name] = grade
+            print(f"Exam conducted for: {name} with grade: {grade}")
+        else:
+            print(f"Student not found: {name}")
+    
+    def display_students(self):
+        for name, grade in self._students.items():
+            print(f"Student: {name}, Grade: {grade}")
+
+# Usage example
+my_school = School()
+my_school.admit_student("Alice")
+my_school.admit_student("Bob")
+
+my_school.conduct_exam("Alice", 85)
+my_school.conduct_exam("Bob", 90)
+
+my_school.display_students()

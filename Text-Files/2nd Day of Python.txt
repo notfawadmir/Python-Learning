@@ -1,0 +1,149 @@
+TYPE CASTING:
+The conversion of one Data Type into another Data type is known as Type Casting.
+python supports a wide variety of functions or methods like: int(), float(), str(), ord(), tuple(),
+list(), set(), dict(), hex(), oct() etc.
+the data type should be valid.
+
+General Example:
+a = "1"
+b = "4"
+print(a+b)
+print(int(a)+int(b))
+Types of type casting:
+1) Explicit Type casting or explicit conversion: The conversion of one data type into another data 
+type, 
+done via developer or programmer's intervention or manually as per the requirement, is known as 
+explicit
+type casting. Can be achieved by the Python's Built in functions: ord(), str(), float(), hex() etc.
+
+Example: 
+string = "13"
+number = 7
+str_num = int(string)   #change the string into number.
+sum = number + str_num
+print("The sum of two numbers is: " ,sum)
+2) Implicit Type casting or implicit conversion: The Data types in python do not have the same level 
+i.e. 
+ordering of data types is not the same in python. some have higher level while some have lower level.
+According to this level, one data type is converted into other by the Python 
+Interpreter itself (Automatically). 
+THis is called the implicit type casting.
+
+Example:
+a = 4.5
+print(type(a))
+b = 5
+print(type(b))
+c = a+b
+print(c)
+print(type(c))
+
+
+Task: Add the two values in which one value is floating and other value is 
+integer type.
+the input should be taken from user.
+
+
+USER INPUT: In python, we can take user input () function. This input function gives a return value as
+string/character hence we have to pass that into a variable.
+
+a = input()
+print(a)
+
+varaible = int(input())
+variable = float(input())
+
+
+a = input("Enter Your Name: ")
+print("My Name is: " ,a)
+
+STRINGS: ANything which is enclosed in double or single quotes is known as string. 
+It is essentially the sequence
+of textual data
+
+name = "MRK"
+friend = "Waseem"
+other_friend = 'Shuja"
+print("Hello," +name)
+
+apple = "He said,"He wants to eat apple"
+print(apple)			#Error
+but if 
+apple = "He said,\"He wants to eat apple"
+print(apple)				#no error now we can use double quotes inside the string.
+
+Array of character: 
+name = "MRK"
+print(name[0])
+print(name[1])
+print(name[2])
+print(name[3])		#show the error of index coz there is no 3 element in the MRK.
+print(Name[0])		# it will show you the charcter by character output.
+print(name[4])
+
+name = "MRK"
+for character in name:
+    print(character)
+output:
+M
+R
+K
+
+we can find the length of the string using the len() function.
+names = "HARIS, Rizwan"
+print(len(names))		#shows the length along with spaces count.
+
+fruit = "Mango"
+len1 = len(fruit)
+print("Mango is a" ,len1, "character word")
+STRING SLICING: String is basically like an array. thats why we can access the elements in the array.
+
+names = "HARIS, Rizwan"
+print(names[0:5])
+
+POSITIVE SLICING:
+
+name = "Mango"
+MLen = len(name)
+print(MLen)
+print(name[0:4])	#Will print the first four letter
+print(name[:4])    	#auto zero will be assigned by the python itself
+print(name[2:5])   	#it will start from N and end with O.
+print(name[:])		#It will auto print the whole name.
+
+NEGATIVE SLICING:
+name = "Mango"
+MLen = len(name)
+print(name[:-4])    #output will be only M, it subtract whole length from given value
+print(name[:len(name)-4])    #output will be only M, it subtract whole length from given value
+
+LOOP THROUGH STRING:
+strings are array and array are iterable, thus we can loop through string.
+alpha = "ABCD"
+for i in alpha:
+print(i)	#output will be A B C D but in line.
+
+NOW LETS HAVE A QUICK TASK:
+WHat will be the output of the following line of code:
+name = "Muhammad"
+print(name[-6:-1])
+
+
+Task: String Manipulation Challenge
+
+Description:
+You are given a string sentence. 
+Your task is to write a Python program to perform the following operations:
+
+-Count the number of characters (including spaces) in the sentence.
+-Count the number of words in the sentence.
+-Convert the sentence to uppercase.
+-Convert the sentence to lowercase.
+-Print the sentence in reverse order.
+Instructions:
+
+-Create a Python program that takes a string sentence as input.
+-Implement functions to perform each of the mentioned operations.
+-Use appropriate built-in string methods and loops where necessary.
+-Test your program with different sentences to ensure its correctness.
+-Add comments to explain each step of your code.

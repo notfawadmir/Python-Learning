@@ -1,0 +1,74 @@
+Today's class 
+
+shortcut for code running: f3 in settings
+theme chosen: monokai
+first program hello world
+print("Hello world", 6, 7, 8): We can print multiple values in output.
+print("Hello WOrld", 6, 7, sep = '~'): It will seprate the character by the sign ~ in output.
+
+and some features of print command
+new line: \n
+comments: # used for comment. you can add multiple comments using this sign. 
+this is non executable line.
+
+can also select the code and press Ctrl + /: thw whole line will auto commented.
+multi-line comment: Select the lines and press Ctrl+/
+also used triple single quotes or triple double quotes for commenting multiple lines.
+
+Escape sequnce character: \n it look like two characters but actually it is one charater which is 
+used for new line.
+
+variables and data types: VARIABLE: its a container that holds data.
+a=1
+print(a):::: in my computer 1 is stored in the place of "a" in RAM.
+a=1		::Value
+b=True		::Boolean
+c="Harry"	::String
+d= None		::None type varaible
+
+DATA TYPE: It specify the type of varaible that holds by the varaible.
+for operations the same data type should be there.
+in order to know the type of the data type we use TYPE function.
+print("The type of a is: ", Type(a))
+a = 1
+b = "Rizwan"
+c = True
+d = None
+e = 1.56
+f = complex(5,8)
+g = [1,1.24,"Horse", [1,2], [1.4, 0.6]]
+h = ("Parrot", "line")
+i = {"Name":"MRK", "Age": 25, "Can Vote": True }
+print(a,b,c,d,e,f,g,h,i)
+print("Type of vraibles are: " , type(a))
+print("Type of vraibles are: " , type(b))
+print("Type of vraibles are: " , type(c))
+print("Type of vraibles are: " , type(d))
+print("Type of vraibles are: " , type(e))
+print("Type of vraibles are: " , type(f))
+print("Type of vraibles are: " , type(g))
+print("Type of vraibles are: " , type(h))
+print("Type of vraibles are: " , type(i))
+
+Task: Add two complex numbers.
+Built-in Data Types:
+Number: int, float, complex
+a = 1		: Int
+b = 1.56	: FLoat
+c= complex(3,5)	:COmplex
+
+LIST: Order collection of different data elements of vary data types.: Will learn in future.
+Tuples: Tuple is exactly the same as lists but not changeable means immutable: also learn in future.
+Mapped data: DICtionary::Collection of key value pairs.
+
+In python everything is object.
+
+Exercise: Create a Calculator in JUPYTER NOTEBOOK: which perform the following operations
+addition of two numbers
+subtraction of two numbers
+power of value upto any number.
+division of two numbers
+multiplication of two numbers.
+But the conditions are:
+1. input should be taken from the user.
+2. Hint: 5**6

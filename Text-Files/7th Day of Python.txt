@@ -1,0 +1,215 @@
+FUNCTIONS:::::::::
+Why? Because using functions, the line of code 
+become less and error free. A function is a block 
+of code that performs a specific task whenever 
+it is called. in bigger programs, where we have 
+large amounts of code, it is available to create
+for use existing functions that make the program 
+flow organized and neat.
+
+TYPES:::::::::::::
+User defined functions
+Built-in Functions
+Pre-Defined Functions: Defined and pre-coded.
+min(), max(), len(), sum(), type(), range(), 
+dict(), list(), tuple(), set(), print() etc.
+
+User defined functions: Created by user as per 
+their needs. 
+It is usually starts from def ur function(argument)
+
+EXAMPLE:::::::::::
+import math
+a = float(input("Enter the first value: "))
+b = float(input("Enter the second value: "))
+GM = math.sqrt(a*b)
+AM = (a+b)/2
+HM = (2*a*b)/(a+b)
+print("The GM of the values is: ",GM)
+print("The AM of the values is: ",AM)
+print("The HM of the values is: ",HM)
+_________________________________________________________________________________________________________________
+EXAMPLE: User defined function
+def greet(name):
+    print("Hello, " + name + "!")
+greet("Adnan Rashid")
+
+EXAMPLE: User defined function
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(result)
+
+EXAMPLE: User define function
+def calculate_area(radius):
+    area = 3.14159 * radius ** 2
+    return area
+
+radius = int(input("Enter Radius of circle: "))
+area = calculate_area(radius)
+print("The area of the circle with radius", radius, "is:", area)
+
+
+EXAMPLE: User Define function
+def add(a, b):
+    return a + b
+
+a = int(input("Enter the Value of First Number: "))
+b = int(input("Enter the value of second integer: "))
+result = add(a, b)
+print(result)
+_________________________________________________________________________________________________________________
+EXAMPLE: Built-in function or predefined function
+my_string = "Hello, world!"
+print(len(my_string)) 
+my_list = [1, 2, 3, 4, 5]
+print(sum(my_list)) 
+my_number = -5
+print(abs(my_number))  
+my_tuple = (3, 1, 4, 1, 5, 9)
+print(sorted(my_tuple))
+
+EXAMPLE: Built-In Function
+my_string = str(input("Enter Any String: "))
+print(len(my_string))
+
+EXAMPLE: Built-in Function
+my_list = ['apple', 'banana', 'cherry']
+for index, value in enumerate(my_list):
+    print(index, value)
+_________________________________________________________________________________________________________________
+FUNCTION ARGUMENTS & RETURN STATEMENT:
++->Default Arguments
++->Keyword Arguments
++->Variable length Arguments
++->Required Arguments
+
+
++->DEFAULT ARGUMENTS: We can provide a default 
+value while creating a function. This way the 
+function assumes a default value even if a value
+is not provided in the function call for that 
+argument. 
+
+EXAMPLE:
+def name(fname, mname = "Muhammad", lname = "Rizwan"):
+	print("Welcome", fname, mname, lname)
+name("Khan")
+
+EXAMPLE: DEFAULT ARGUMENTS:
+def average(a=4,b=6):
+	print("Average of two numbers: ", (a+b)/2)
+average()
+
+EXAMPLE: DEFAULT ARGUMENTS:
+def average(a=4,b=6):
+	print("Average of two numbers: ", (a+b)/2)
+average(3, 4)
+
+EXAMPLE: DEFAULT ARGUMENTS: Take one value as 
+default value from above
+def average(a=4,b=6):
+    	print("Average of two numbers: ", (a+b)/2)
+average(3)
+#incase of "b" just write like
+average(b=6)
+
++->KEYWORD ARGUMENT: if we wish the order does not
+matter then we use the keyword argument. We can 
+provide arguments with key = value, this way the 
+interpreter recognize the arguments by parameter 
+name. Hence, the order in which the arguments are 
+passed does not matter.
+
+EXAMPLE: KEYWORD ARGUMENTS
+def name(fname,mname,lname):
+	print("Hello!", fname, mname, lname)
+
+name(mname = "Ali", lname = "Khan", fname = "Muhammad")
+
+
++->REQUIRED ARGUMENT: In this case we should have to
+provide the value of arguments must. In case we
+don't pass the arguments with a key = value syntax
+passing should be exact positional order with actual
+function definition.
+
+EXAMPLE: REQUIRED ARGUMENTS: Can also take three inputs.
+def average(a,b):	#to check values.
+	print("Average of two numbers: ", (a+b)/2)
+
+average(a = int(input("Enter 1st value: ")), b = int(input("Enter 2nd value: ")))
+_________________________________________________________________________________________________________________
++-> ARBITARY ARGUMENTS:
+While creating a function, pass a * before parameter
+name while defining function. The function accesses
+the arguments by processing them in the form of 
+tuple.
+
+EXAMPLE:
+def avg(*num):
+    sum = 0
+    for i in num:
+    
+     sum = sum+i
+     print("Average is: ", sum/len(num))
+
+avg(10,10)
+
++->KEYWORD ARBITARY ARGUMENTS: TASK
++-> RETURN STATEMENT: TASK
+
+Task: Make the code for the result calculation.
+
+define a function for grading.
+thuis function must be user define.
+
+define user define:
+take input from the user for the calculation
+of result.
+_________________________________________________________________________________________________________________
+DECORATORS:
+Decorators in Python are a way to modify or extend the behavior of functions or
+methods without changing their code. They allow you to wrap another function or method in order 
+to execute code before and/or after the wrapped function runs, or to modify its arguments or return 
+value.
+
+EXAMPLE:
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+____________________________________________________________________________________________________________
+PRACTICAL EXAMPLE:
+def measure_time(func):
+    import time
+    
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        print(f"Execution time of {func.__name__}: {end_time - start_time} seconds")
+        return result
+    
+    return wrapper
+
+@measure_time
+def slow_function(n):
+    # Simulate a slow function
+    total = 0
+    for i in range(n):
+        total += i
+    return total
+
+result = slow_function(1000000)
+print("Result:", result)
+________________________________________________________________________________________________________________

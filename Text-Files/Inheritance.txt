@@ -1,0 +1,188 @@
+INHERITANCE: When a class derives from another 
+class. The child class will inherit all the public
+& protected properties & methods from the parent
+class. In addition, it can have its own properties
+and methods, this is called as inheritance.
+It allows us to create a new class from an 
+existing one.
+
+The newly created class is known as the subclass 
+(child or derived class). The existing class from 
+which the child class inherits is known as the 
+superclass (parent or base class).
+
+Python Inheritance Syntax
+# define a superclass
+class super_class:
+    # attributes and method definition
+
+# inheritance
+class sub_class(super_class):
+    # attributes and method of super_class
+    # attributes and method of sub_class
+Here, we are inheriting the sub_class from 
+the super_class.
+
+OR
+
+SYNTAX:
+class BaseClass:
+  Body of base class
+class DeriveClass(BaseClass):
+  Body of derived class
+________________________________________________________________________________
+EXAMPLE:
+class Employee:
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+
+    def showDetails(self):
+        print(f"The name of the Employee: {self.id} is {self.name}")
+
+e1 = Employee("Muhammad Rizwan Khan", 776)
+e1.showDetails()
+e2 = Employee("Ahmad Khan", 765)
+e2.showDetails()
+_________________________________________________________________________________
+is-a relationship
+Inheritance is an is-a relationship. That is, we use inheritance 
+only if there exists an is-a relationship between two classes. 
+For example,
+
+Car is a Vehicle
+Apple is a Fruit
+Cat is an Animal
+_________________________________________________________________________________
+Now let suppose the code is about 1000+ lines
+then someone want to change the class to other 
+name like Employer etc. then there will be issue
+that's why for this we use the inheritance concept.
+
+EXAMPLE: Inheritance
+class Employee:
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+
+    def showDetails(self):
+        print(f"The name of the Employee: {self.id} is {self.name}")
+
+class Programmer(Employee):
+    def showLanguage(self):
+        print("The Default Language is Python")
+e1 = Employee("Muhammad Rizwan Khan", 776)
+e1.showDetails()
+e2 = Employee("Ahmad Khan", 765)
+e2.showDetails()
+e2.showLanguage()	#Not working coz
+			#show language is not 
+			#define on employee
+______________________________________________________________________________________________
+Now let me make this as programmer: then
+class Employee:
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+
+    def showDetails(self):
+        print(f"The name of the Employee: {self.id} is {self.name}")
+
+class Programmer(Employee):
+    def showLanguage(self):
+        print("The Default Language is Python")
+e1 = Employee("Muhammad Rizwan Khan", 776)
+e1.showDetails()
+e2 = Programmer("Ahmad Khan", 765)
+e2.showDetails()
+e2.showLanguage()
+
+Now in this example the Programmer class has all 
+the attribbutes which is in major class.
+
+Derived class inherit the features from the base 
+class where new features can be added to it. This 
+results in re-usability of code.
+_______________________________________________________________________________________________
+TYPES: 
++-> Single Inheritance
++-> Multiple Inheritance
++-> Multilevel Inheritance
++-> Hierarchical Inheritance
++-> Hybrid Inheritance
+
+SINGLE INHERITANCE:Single inheritance refers to the
+concept in object-oriented programming where a 
+class inherits attributes and methods from a single
+parent class.
+
+SYNTAX:
+class ParentClass:
+    # Parent class attributes and methods
+
+class ChildClass(ParentClass):
+    # Child class attributes and methods
+
+EXAMPLE:
+class Parent:
+    def func1(self):
+        print("This function is in parent class.")
+
+class Child(Parent):
+    def func2(self):
+        print("This function is in child class.")
+
+object = Child()
+object.func1()  
+object.func2()  
+________________________________________________________________________________________
+Multiple Inheritance:
+When a class can be derived from more than one 
+base class this type of inheritance is called 
+multiple inheritances. In multiple inheritances, 
+all the features of the base classes are 
+inherited into the derived class. 
+
+EXAMPLE:
+
+class Mother:
+	mothername = ""
+	def mother(self):
+		print(self.mothername)
+
+class Father:
+	fathername = ""
+	def father(self):
+		print(self.fathername)
+
+class Son(Mother, Father):
+	def parents(self):
+		print("Father :", self.fathername)
+		print("Mother :", self.mothername)
+
+
+s1 = Son()
+s1.fathername = "ABC"
+s1.mothername = "XYZ"
+s1.parents()
+____________________________________________________________________________________________________________
+Other types are available at:
+https://www.geeksforgeeks.org/types-of-inheritance-python/
+____________________________________________________________________________________________________________
+SIMPLE TASK:
+Create a Python program that models a basic shape 
+hierarchy. Define a base class called Shape. 
+It should have a method area() that returns 0. 
+Then, create two subclasses: Rectangle and Circle.
+Rectangle should inherit from Shape and have 
+attributes length and width. It should override 
+the area() method to calculate and return the 
+area of the rectangle.
+
+Circle should also inherit from Shape and 
+have an attribute radi       us. It should override the 
+area() method to calculate and return the area of 
+the circle. Finally, create instances of both 
+Rectangle and Circle classes and demonstrate 
+their functionality by calculating and displaying 
+their areas.
