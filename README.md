@@ -238,7 +238,7 @@ For questions, feedback, or collaboration, feel free to reach out:
 
 - **GitHub**: [notfawadmir](https://github.com/notfawadmir)
 - **Email**: notfawadmir@gmail.com
-- **LinkedIn**: [Connect on LinkedIn](https://linkedin.com/in/fawada)
+- **LinkedIn**: [Connect on LinkedIn](https://www.linkedin.com/in/fawad-ahmed-mir-9621762ba)
 
 ---
 
